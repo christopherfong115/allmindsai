@@ -35,11 +35,71 @@ const webHavest = [
   },
 ];
 
+const pricing = [
+  ["", "", "", "Recommended", ""],
+  ["", "Freelance", "Startup", "Business", "Business +"],
+  ["", "$49 /mo", "$99 /mo", "$249 /mo", "$599 /mo"],
+  ["Api Credits", "150,000", "1,000,000", "3,000,000", "8,000,000"],
+  ["Concurrent requests", "5", "50", "100", "200"],
+  ["JavaScript rendering", "y", "y", "y", "y"],
+  ["Rotating & Premium Proxies", "y", "y", "y", "y"],
+  ["Geotargeting", "y", "y", "y", "y"],
+  ["Screenshots, Extraction Rules, Google Search API", "y", "y", "y", "y"],
+  ["Priority Email Support", "n", "y", "y", "y"],
+  ["Dedicated Account Manager", "n", "n", "y", "y"],
+  ["Team Management", "n", "n", "y", "y"],
+  ["", "Try Now", "Try Now", "Try Now", "Try Now"],
+];
+
+const printVal = (val: string, index: number) => {
+  if (val == "Recommended" && index == 3) {
+    return <td className="bg-yellow-400 py-4 px-14">{val}</td>;
+  }
+  if (val == "n") {
+    return <td className="py-4 px-14">-</td>;
+  }
+  if (val == "y" && index != 3) {
+    return (
+      <td className="py-4 px-14 text-center">
+        <IoMdCheckmark className="text-green-500 mx-auto text-3xl" />
+      </td>
+    );
+  }
+  if (val == "y" && index == 3) {
+    return (
+      <td className="bg-black py-4 px-14">
+        <IoMdCheckmark className="text-green-500 mx-auto text-3xl" />
+      </td>
+    );
+  }
+  if (val == "Try Now" && index == 3) {
+    return (
+      <td className="py-4 px-14 bg-black -z-50">
+        <button className="bg-yellow-400 px-6 py-2">{val}</button>
+      </td>
+    );
+  }
+  if (val == "Try Now" && index != 3) {
+    return (
+      <td className="py-4 px-14 -z-50">
+        <button className="border border-black px-6 py-2">{val}</button>
+      </td>
+    );
+  }
+  if (index == 3) {
+    return <td className="bg-black text-white py-4 px-14">{val}</td>;
+  }
+  if (index == 0) {
+    return <td className="py-4 px-14 text-left">{val}</td>;
+  }
+  return <td className="py-4 px-14">{val}</td>;
+};
+
 export default function Home() {
   return (
-    <>
-      <div className="bg-yellow-400 h-screen w-[115%] absolute pt-20 -rotate-6 -translate-y-20 top-0 -translate-x-60 -z-50" />
-      <div className="bg-yellow-400 h-1/2 w-screen absolute pt-20 -translate-y-[6.5rem] -z-50" />
+    <div className="overflow-hidden">
+      <div className="bg-yellow-400 h-screen w-[115%] absolute pt-20 -rotate-6 -translate-y-20 top-0 -translate-x-60 -z-50 overflow-hidden" />
+      <div className="bg-yellow-400 h-1/2 absolute pt-20 -translate-y-[6.5rem] -z-50 w-screen overflow-hidden" />
       <Navbar />
       <div className="flex align-middle items-center p-10 pt-32 w-fit mx-auto justify-center">
         <div className="w-1/4">
@@ -182,7 +242,7 @@ export default function Home() {
           ))}
         </ul>
       </div>
-      <div className="relative mt-[20%] h-screen">
+      <div className="relative mt-[20%] h-screen overflow-hidden">
         <div className="absolute bg-black w-[200%] h-3/4 rotate-6 -translate-x-32 -z-50" />
         <div className="text-white w-7/12 items-center justify-center mx-auto translate-y-20">
           <div className="rounded-2xl w-fit h-fit p-6">
@@ -219,9 +279,24 @@ export default function Home() {
         </div>
       </div>
       <div className="text-center items-center w-7/12 gap-20 justify-center mx-auto mt-[20%] mb-4">
-        <h2 className="text-5xl font-bold">Simple, trnasparent pricing.</h2>
-        <h3 className="text-xl mb-20">cancel anytime, no questions asked!</h3>
+        <h2 className="text-5xl font-bold">Simple, transparent pricing.</h2>
+        <h3 className="text-xl mb-20 mt-5">
+          Cancel anytime, no questions asked!
+        </h3>
+        <table className="w-fit mx-auto">
+          <tbody>
+            {pricing.map((option, j) => {
+              return (
+                <tr>
+                  {option.map((price, i) => {
+                    return printVal(price, i);
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
-    </>
+    </div>
   );
 }
