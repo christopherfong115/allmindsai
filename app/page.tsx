@@ -242,7 +242,7 @@ export default function Home() {
           ))}
         </ul>
       </div>
-      <div className="relative mt-[20%] h-screen overflow-hidden">
+      <div className="relative mt-[20%] h-screen">
         <div className="absolute bg-black w-[200%] h-3/4 rotate-6 -translate-x-32 -z-50" />
         <div className="text-white w-7/12 items-center justify-center mx-auto translate-y-20">
           <div className="rounded-2xl w-fit h-fit p-6">
