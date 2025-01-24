@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <title>web 33, Touch, hand, finger, gesture, web design, computer, browser, internet</title>
+  <path d="M45,48V46.101l1.58263-2.67772A3,3,0,0,0,47,41.89682V34.9969a2,2,0,0,0-2.00155-2L40.99938,33a2,2,0,0,0-2,2V27a2.03155,2.03155,0,0,0-2.03157-2.03155A1.96781,1.96781,0,0,0,35,26.93622V37.46635a3.54056,3.54056,0,0,0-3.53021-3.53018H30.9994v7.35827a3,3,0,0,0,.689,1.91293L34,46v2" style="fill: none;stroke: #353535;stroke-miterlimit: 10;stroke-width: 2px"/>
+  <g>
+    <polyline points="47 30 47 1 1 1 1 43 28.5 43" style="fill: none;stroke: #353535;stroke-miterlimit: 10;stroke-width: 2px"/>
+    <circle cx="5" cy="5" r="1" style="fill: #353535"/>
+    <circle cx="9" cy="5" r="1" style="fill: #353535"/>
+    <circle cx="13" cy="5" r="1" style="fill: #353535"/>
+    <line x1="1" y1="9" x2="47" y2="9" style="fill: none;stroke: #353535;stroke-miterlimit: 10;stroke-width: 2px"/>
+  </g>
+</svg>
