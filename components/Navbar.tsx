@@ -46,7 +46,7 @@ const NavButton = ({
         {itemName}
       </div>
       {isDropdownOpen && (
-        <ul className="absolute w-fit px-5 py-2 mt-2 rounded-lg bg-black text-white">
+        <ul className="absolute w-fit px-5 py-2 rounded-lg bg-black text-white">
           {subMenuItems.map((item) => (
             <li key={item.name}>
               <a href={item.path}>{item.name}</a>

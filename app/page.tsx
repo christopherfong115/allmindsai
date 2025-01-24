@@ -296,6 +296,39 @@ export default function Home() {
             })}
           </tbody>
         </table>
+        <h4>All prices are exclusie of VAT.</h4>
+        <div className="flex flex-col mt-32">
+          <h2 className="text-xl font-bold mb-3">
+            Need more credits and concurrency per month?
+          </h2>
+          <button className="bg-yellow-500 py-3 px-20 font-bold hover:bg-yellow-400">
+            Get in touch!
+          </button>
+        </div>
+      </div>
+      <div className="mt-32 mx-auto w-7/12 text-xl bg-black text-white p-4 rounded-xl mb-[3%]">
+        Hello Allminds AI Team, this website was done in 4-ish hours because
+        this week arose many problems. My unit had no heat and I had to keep
+        moving back and forth between my waterloo home and home in Torono. As I
+        am currently working on this project at 5am, this is all I can get done.
+        I know there are definitely css overflow problems that need to be fixed
+        because of the rotates yellow and black shapes. There are also some
+        missing features on some components and lots of different details im
+        missing as well. As well as the bottom half of the site + footer. I
+        coded every component from scratch and did not use any libraries to help
+        me, not sure if this was a requirement though. This page is also not
+        optimized for mobile. I hope you can find some effort that I've put into
+        my work. :)
+      </div>
+      <div className="mt-32 mx-auto w-7/12 text-xl bg-yellow-400 p-4 rounded-xl mb-[10%]">
+        Since I don't have enough time to debug my code and to work on
+        optimizing, I hope I can type it here so you have a good idea on how I
+        would tackle it. I would create an aditional component specific to
+        opening up a drawer for the navbar and check for break points, have a
+        conditional render to see if the window is within those breakpoints then
+        we render the navbar drawer othewise we just render the desktop navbar
+        on default. This was one of he bigger tasks I wanted to work on but did
+        not get the chance to finish.
       </div>
     </div>
   );
